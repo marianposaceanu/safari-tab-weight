@@ -41,9 +41,16 @@ Resource sizes are best-effort. The classifier uses the compressed resource-body
 
 ## Run in Safari
 
+Clone the standalone repository first:
+
+```sh
+git clone https://github.com/marianposaceanu/safari-tab-weight.git
+cd safari-tab-weight
+```
+
 Open [`xcode/Tab Weight/Tab Weight.xcodeproj`](xcode/Tab%20Weight/Tab%20Weight.xcodeproj) in Xcode. Choose a development team for the app and extension targets, build and run the macOS app, then enable **Tab Weight** in **Safari → Settings → Extensions**. Safari may ask which websites the extension can access; access is needed only for the tab being measured.
 
-The generated Xcode project references the portable files in [`extension`](extension), so changes there are included automatically. To rebuild the wrapper with Xcode 26.6 without changing the system-wide developer-directory selection, run from this directory:
+The generated Xcode project references the portable files in [`extension`](extension), so changes there are included automatically. To rebuild the wrapper with your installed Xcode without changing the system-wide developer-directory selection, run from this directory:
 
 ```sh
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer \
